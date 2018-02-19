@@ -11,9 +11,9 @@
 <body>
 
 	<h1>Code Topic 05 - Local Storage API</h1>
-	<h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
-
-	<h3>Pick colors, click cells, name and save your logos.</h3>
+	<h4>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h4>
+	<hr></hr>
+	<h1>Pick colors, click cells, name and save your logos.</h1>
 
 <form id="colors" onchange="updateBrush()">
 	<input type="radio" name="color" value="red" checked>Red
@@ -67,22 +67,18 @@
 <br>
 
 	<form>
-	  Name your logo: <br>
+	  Name:
 		<input type="text" id="firstname" value="Red">
 		<input type="button" value="Save" onclick="save()">
 	</form>
 
-<div id="debug">For testing purposes</div>
-
 <br>
 
-<h3>Previously saved Logos</h3>
+<h2>Previously saved Logos</h2>
 <input type="button" value="Refresh List" onclick="loadLocalStorage()">
 <br><br>
 <div id="logolist"></div>
 <br>
-
-
 
 <script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
 </body>
