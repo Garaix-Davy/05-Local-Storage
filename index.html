@@ -5,7 +5,6 @@
 	<title>Local Storage</title>
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
-<script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
 
 </head>
 
@@ -13,8 +12,79 @@
 
 	<h1>Code Topic 05 - Local Storage API</h1>
 	<h2>Local Storage API, Storing and Retrieving Simple Data, Arrays, Associative Arrays, and Objects</h2>
-	<h3>Hello</h3>
 
+	<h3>Pick colors, click cells, name and save your logos.</h3>
+
+<form id="colors" onchange="updateBrush()">
+	<input type="radio" name="color" value="red" checked>Red
+	<input type="radio" name="color" value="blue">Blue
+	<input type="radio" name="color" value="grey">Grey
+	<input type="radio" name="color" value="white">White
+	<br>
+	<input type="radio" name="color" value="pink">Pink
+	<input type="radio" name="color" value="yellow">Yellow
+	<input type="radio" name="color" value="green">Green
+	<input type="radio" name="color" value="Black">Black
+</form>
+
+	<div class="grid">
+		<div class="row">
+	    <div class="cell" id="c15" onclick="paint(id)"></div>
+	    <div class="cell" id="c25" onclick="paint(id)"></div>
+	    <div class="cell" id="c35" onclick="paint(id)"></div>
+			<div class="cell" id="c45" onclick="paint(id)"></div>
+			<div class="cell" id="c55" onclick="paint(id)"></div>
+	  </div>
+		<div class="row">
+	    <div class="cell" id="c14" onclick="paint(id)"></div>
+	    <div class="cell" id="c24" onclick="paint(id)"></div>
+	    <div class="cell" id="c34" onclick="paint(id)"></div>
+			<div class="cell" id="c44" onclick="paint(id)"></div>
+			<div class="cell" id="c54" onclick="paint(id)"></div>
+	  </div>
+	  <div class="row">
+	    <div class="cell" id="c13" onclick="paint(id)"></div>
+	    <div class="cell" id="c23" onclick="paint(id)"></div>
+	    <div class="cell" id="c33" onclick="paint(id)"></div>
+			<div class="cell" id="c43" onclick="paint(id)"></div>
+			<div class="cell" id="c53" onclick="paint(id)"></div>
+	  </div>
+	  <div class="row">
+	    <div class="cell" id="c12" onclick="paint(id)"></div>
+	    <div class="cell" id="c22" onclick="paint(id)"></div>
+	    <div class="cell" id="c32" onclick="paint(id)"></div>
+	    <div class="cell" id="c42" onclick="paint(id)"></div>
+	    <div class="cell" id="c52" onclick="paint(id)"></div>
+	  </div>
+	  <div class="row">
+	    <div class="cell" id="c11" onclick="paint(id)"></div>
+	    <div class="cell" id="c21" onclick="paint(id)"></div>
+	    <div class="cell" id="c31" onclick="paint(id)"></div>
+			<div class="cell" id="c41" onclick="paint(id)"></div>
+			<div class="cell" id="c51" onclick="paint(id)"></div>
+	  </div>
+	</div>
+<br>
+
+	<form>
+	  Name your logo: <br>
+		<input type="text" id="firstname" value="Red">
+		<input type="button" value="Save" onclick="save()">
+	</form>
+
+<div id="debug">For testing purposes</div>
+
+<br>
+
+<h3>Previously saved Logos</h3>
+<input type="button" value="Refresh List" onclick="loadLocalStorage()">
+<br><br>
+<div id="logolist"></div>
+<br>
+
+
+
+<script language="JavaScript" type="text/javascript" src="js/functions.js"></script>
 </body>
 
 </html>
