@@ -15,17 +15,19 @@
 	<hr></hr>
 	<h1>Pick colors, click cells, name and save your logos.</h1>
 
-<form id="colors" onchange="updateBrush()">
-	<input type="radio" name="color" value="red" checked>Red
-	<input type="radio" name="color" value="blue">Blue
-	<input type="radio" name="color" value="grey">Grey
-	<input type="radio" name="color" value="white">White
-	<br>
-	<input type="radio" name="color" value="pink">Pink
-	<input type="radio" name="color" value="yellow">Yellow
-	<input type="radio" name="color" value="green">Green
-	<input type="radio" name="color" value="Black">Black
-</form>
+<span class=colorPicker>
+	<span class="color" id="black" onclick="changeBrush(id)">Black</span>
+	<span class="color" id="orange" onclick="changeBrush(id)">Orange</span>
+	<span class="color" id="blue" onclick="changeBrush(id)">Blue</span>
+	<span class="color" id="green" onclick="changeBrush(id)">Green</span>
+	<span class="color" id="red" onclick="changeBrush(id)">Red</span>
+		<br id="red">
+	<span class="color" id="cyan" onclick="changeBrush(id)">Cyan</span>
+	<span class="color" id="pink" onclick="changeBrush(id)">Pink</span>
+	<span class="color" id="yellow" onclick="changeBrush(id)">Yellow</span>
+	<span class="color" id="brown" onclick="changeBrush(id)">Brown</span>
+	<span class="color" id="white" onclick="changeBrush(id)">White</span>
+</span><br><br>
 
 	<div class="grid">
 		<div class="row">
@@ -66,9 +68,10 @@
 	</div>
 <br>
 
+<input type="button" value="Reset the Grid" onclick="resetGrid()"><br><br>
+
 	<form>
-	  Name:
-		<input type="text" id="firstname" value="Red">
+	  Save your work: <input type="text" id="firstname" value="logo">
 		<input type="button" value="Save" onclick="save()">
 	</form>
 

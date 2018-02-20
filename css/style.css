@@ -12,3 +12,62 @@
   background: black;
   display: table-cell;
 }
+
+.colorPicker {
+  border-spacing: 5px;
+}
+
+.color {
+  border-radius: 25px;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  background: black;
+  display: table-cell;
+  text-align: center;
+  color: white;
+  border: 2px solid transparent;
+}
+
+#red.color {
+  background: red;
+}
+
+#orange.color {
+  background: orange;
+}
+
+#black.color {
+  background: black;
+}
+
+#blue.color {
+  background: blue;
+}
+
+#green.color {
+  background: green;
+}
+
+#cyan.color {
+  background: cyan;
+}
+
+#pink.color {
+  background: pink;
+}
+
+#yellow.color {
+  background: yellow;
+  color: black;
+}
+
+#brown.color {
+  background: brown;
+}
+
+#white.color {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}

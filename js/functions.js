@@ -1,11 +1,23 @@
+var brushColor = "";
 
 function updateBrush() {
     var selectedColor = document.querySelector('input[name="color"]:checked').value;
     return selectedColor;
 }
 
+function changeBrush(id) {
+    brushColor = id;
+    var children = document.querySelector('.colorPicker').children;
+    for (var i = 0; i < children.length; i++){
+      document.getElementById(children[i].id).style.border = "2px solid transparent";
+    }
+    document.getElementById(id).style.border = "2px solid red";
+    if (id=="red"){
+      document.getElementById(id).style.border = "2px solid black";
+    }
+  }
+
 function paint(id) {
-  var brushColor = updateBrush();
   document.getElementById(id).style.background = brushColor;
 }
 
@@ -20,6 +32,7 @@ function save() {
 
   localStorage.setItem(logoName,coords);
   loadLocalStorage();
+  document.getElementById("firstname").value += "_new";
 }
 
 function loadLocalStorage(){
@@ -52,4 +65,11 @@ function restore(i){
 function del(i){
   localStorage.removeItem(localStorage.key(i));
   loadLocalStorage();
+}
+
+function resetGrid(){
+  var currentGrid = document.querySelectorAll(".cell");
+  for (var i = 0; i < currentGrid.length; i++){
+    document.getElementById(currentGrid[i].id).style.backgroundColor = "";
+  }
 }
