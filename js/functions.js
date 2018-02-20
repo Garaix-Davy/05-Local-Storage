@@ -10,6 +10,9 @@ function changeBrush(id) {
     var children = document.querySelector('.colorPicker').children;
     for (var i = 0; i < children.length; i++){
       document.getElementById(children[i].id).style.border = "2px solid transparent";
+      if (children[i].id=="white"){
+        document.getElementById(children[i].id).style.border = "2px solid black"
+      }
     }
     document.getElementById(id).style.border = "2px solid red";
     if (id=="red"){
